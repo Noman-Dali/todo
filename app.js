@@ -6,6 +6,7 @@ const app = express();
 
 const items = ["Buy Food", "Cook Food", "Eat Food"];
 const workItems = [];
+const PORT = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
@@ -45,6 +46,6 @@ app.get("/about",function(req,res) {
 });
 
 
-app.listen(3000, function() {
+app.listen(PORT, function() {
 	console.log("server started on port 3000");
 });
